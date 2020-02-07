@@ -1,0 +1,114 @@
+body {
+	background-color: white;
+}
+header {
+	margin: 0 auto;
+}
+.home {
+	margin: 0 auto;
+	#banner {
+		height: 300px;
+		background-color: @violet;
+		background-image: linear-gradient((@violet + 30), (@violet - 30));
+		margin-top: 20px;
+		padding: 120px 0;
+		text-align: center;
+/*		border-top: solid 1px (@violet - 30);
+		border-bottom: solid 1px (@violet - 30);*/
+		h1 {
+			font-size: 4rem;
+		}
+		@media @tablet {
+			display: block;
+			height: auto;
+			margin: 0;
+			padding: 30px 0;
+			h1 {
+				margin: 0 0 20px;
+			}			
+		}
+		@media @mobile {
+			height: 200px;
+			padding: 51px 0;
+			h1 {
+				font-size: 3.2rem;
+			}
+		}
+	}
+	main {
+		margin: 0 auto;
+		padding: 30px 0;
+		.row {
+			max-width: 90%;
+			margin: 20px auto;
+			padding: 10px;
+			.setFlex(row, space-between);
+			section {
+				padding: 20px;
+				background-color: @main-bg;
+				box-shadow: 0px 0px 10px 4px gray;
+				border-radius: 5%;
+				flex-basis: 30%;
+				.setFlex(column, flex-start);
+				img {
+					width: 150px;
+					height: 150px;
+					margin: 10px auto;
+					border-radius: 5%;
+				}
+			}
+			@media @tablet {
+				max-width: 100%;
+			}
+			@media @mobile {
+				.setFlex(column, space-evenly);
+				max-width: 100%;
+				margin: 0 auto;
+				padding: 0;
+				section {
+					box-shadow: none;
+					border-radius: 0;
+					border-top: solid 1px (@main-bg - 30);
+					border-bottom: solid 1px (@main-bg - 30);
+				}
+
+			}
+		}
+		#buttons{
+			max-width: 400px;
+			margin: 0 auto;
+			.setFlex(row, center);
+			.button {
+				text-align: center;
+				width: 150px;
+				margin: 0 auto;
+				.styleButton(@periwinkle, @font-color, @pop-color1, @font-color, @pop-color2, @font-color);
+			}	
+			.login {
+				.styleButton(@pop-color2, @font-color, @pop-color1, @font-color, @periwinkle, @font-color);
+			}
+			@media @mobile {
+				.setFlex(column, flex-start);
+				.button {
+					width: 100%;
+					border-radius: 0;
+					border-top: solid 1px (@button-bg - 30);
+					border-bottom: solid 1px (@button-bg - 30);
+				}
+				.login {
+					border-top: solid 1px (@pop-color2 - 30);
+					border-bottom: solid 1px (@pop-color2 - 30);		
+				}
+			}
+		}
+		@media @tablet {
+			padding: 10px 0;
+		}
+		@media @mobile {
+			padding: 0;
+		}
+	}
+	@media @mobile {
+		width: 100%;
+	}
+}

@@ -1,0 +1,31 @@
+footer {
+    padding-bottom: 20px;
+    padding-top: 80px;
+    .setFlex(column, baseline);
+    align-items: center;
+    width: 100%;
+    background-color: @violet;
+    background-image: linear-gradient((@violet + 30), (@violet - 30));
+    color: @diamond;
+    border-top: solid 1px (@violet - 30);
+    nav {
+      .setFlex(row, space-between);
+      margin-bottom: 10px;
+      a {
+        padding: 0 20px;
+        color: @diamond;
+        &:hover {
+          color:white;
+        }
+        &:active {
+          color: @pop-color2;
+        }
+      }
+    }
+    @media @tablet {
+      padding-top: 50px;
+    }
+    @media @mobile {
+      padding-top: 30px;
+    }
+  }

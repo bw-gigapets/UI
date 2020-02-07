@@ -1,0 +1,24 @@
+.styleButton(@bg-col, @text-col,@hover-col, @hover-text-col,@active-col,@active-text-col){
+    padding: 10px 25px;
+    background-color: @bg-col;
+    color: @text-col;
+    border-radius: 8px;
+    &:hover {
+        background-color: @hover-col;
+        color: @hover-text-col;
+    }
+    &:active {
+        background-color:@active-col;
+        color: @active-text-col;
+    }
+}
+
+.setFlex(@direction, @justify) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+}
+
+.baseBottomMargin {
+    margin-bottom: 20px;
+}
